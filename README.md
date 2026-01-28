@@ -1,33 +1,33 @@
 # Linear Regression with Gradient Descent
 
-A from-scratch implementation of linear regression using gradient descent optimization.
+A from-scratch implementation of linear regression using gradient descent optimization with real-time visualization.
 
 ## Overview
 
-This project implements linear regression without high-level ML libraries to understand the core mechanics of gradient descent and optimization.
+This project implements simple linear regression without high-level ML libraries to understand the core mechanics of gradient descent and optimization. Features a live animation showing the model converging to the optimal solution.
 
 ## Features
 
-### Phase 1: Simple Linear Regression
-- 2-variable linear regression (y = mx + b)
-- Batch gradient descent implementation
-- Matplotlib visualization of regression line
+- **Simple linear regression** (y = mx + b) for 2-variable datasets
+- **Batch gradient descent** implementation from scratch
+- **Real-time animation** showing convergence during training
+- **Live metrics display** (epoch, parameters, loss) during visualization
+- **Custom dataset generator** with adjustable scatter levels (1-5)
 
-### Phase 2: Multivariate Regression
-- Support for multiple input features
-- Automatic switching between batch GD and stochastic GD based on dataset size
-- Feature normalization
-- L1 (Lasso) and L2 (Ridge) regularization options
+## How It Works
 
-### Phase 3: Training Visualization
-- Capture gradient descent iterations as frames
-- Generate video showing how the model converges to the optimal solution
-- Visual comparison of different regularization methods and their effect on convergence
+The algorithm minimizes mean squared error by iteratively adjusting slope (m) and intercept (b):
+- Calculates gradients of the loss function with respect to m and b
+- Updates parameters using learning rate
+- Visualizes the regression line at each epoch
 
-## Algorithm Switching
+## Visualization
 
-- Dataset < 10,000 samples → Batch Gradient Descent
-- Dataset ≥ 10,000 samples → Stochastic Gradient Descent
+Uses matplotlib's animation module to show:
+- Static scatter plot of data points
+- Animated regression line adjusting in real-time
+- Current epoch, parameters (m, b), and loss value
+- Configurable FPS for animation speed
 
 ## Dependencies
 
@@ -35,9 +35,14 @@ This project implements linear regression without high-level ML libraries to und
 numpy
 matplotlib
 pandas
-opencv-python
 ```
+
+## Usage
+
+1. Generate synthetic data with `data_generator.py` (optional)
+2. Run `linear_regression.py` and provide CSV path
+3. Watch the live gradient descent animation
 
 ## Status
 
-Phase 1: Complete | Phase 2: In Progress | Phase 3: Planned
+✅ Complete
