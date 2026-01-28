@@ -39,8 +39,8 @@ pandas
 
 ## Usage
 
-1. Generate synthetic data with `data_generator.py` (optional)
-2. Run `linear_regression.py` and provide CSV path
+1. Generate synthetic data with `data/generator.py` (optional)
+2. Run `main.py` and provide CSV path
 3. Watch the live gradient descent animation
 
 ## Status
